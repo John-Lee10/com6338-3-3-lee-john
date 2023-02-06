@@ -30,15 +30,11 @@ function runQuiz (){
     for (var i= 0; i <questionsArr.length; i++){
         var question = questionsArr[i].question
         var answer = confirm(question)
-        if (answer===false) {
+        if (answer) {
             correctanswers++
         }
     }
-    if(correctanswers = 6) {
-        alert ("100%")
-    }
-    else {
+    if(correctanswers <= 6) {
         alert (Math.round(100 * correctanswers/6) + "%")
     }
-
 }
